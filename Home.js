@@ -131,7 +131,7 @@ document.getElementById("leadForm").addEventListener("submit", async function (e
     const form = e.target;
     const data = {
       nombre: form.nombre.value,
-      empresa: form.Empresa.value,
+      empresa: form.empresa.value,
       correo: form.correo.value,
       telefono: form.telefono.value,
       mensaje: form.mensaje.value
