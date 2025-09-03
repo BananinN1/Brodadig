@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BrodaDigital — Marketing que Impulsa</title>
+  <link rel="stylesheet" href="../landing/home.css" />
+</head>
+<body>
+  <!-- Barra de progreso de scroll -->
+  <div id="scrollbar"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="#home">BrodaDigital</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero">
+    <!-- Elementos decorativos parallax -->
+    <div class="orb orb-a" data-depth="0.08"></div>
+    <div class="orb orb-b" data-depth="0.12"></div>
+    <div class="orb orb-c" data-depth="0.18"></div>
+
+    <div class="hero-grid">
+      <div class="hero-left reveal fade-up delay-1">
+        <h1>
+          Crecemos tu marca con <span class="grad">estrategia</span>, 
+          <span class="grad">data</span> y <span class="grad">creatividad</span>.
+        </h1>
+        <p class="hero-sub">
+          Somos una agencia de marketing digital orientada a resultados. 
+          Activamos campañas que convierten y construimos confianza con cada interacción.
+        </p>
+
+        <ul class="bullets">
+          <li>✔ Planes a medida según tu objetivo</li>
+          <li>✔ Optimización continua y reportes claros</li>
+          <li>✔ Equipo senior en performance & branding</li>
+        </ul>
+
+        <div class="cta-row">
+          <a href="#contacto" class="btn primary ripple">Quiero impulsar mi negocio</a>
+          <a href="#servicios" class="btn ghost ripple">Ver servicios</a>
+        </div>
+      </div>
+
+      <aside class="hero-form-card reveal fade-left delay-2" id="contacto">
+        <h2>Agenda una consulta</h2>
+        <p>Cuéntanos sobre tu proyecto y te contactamos hoy.</p>
+        <form id="leadForm" novalidate>
+          <label>
+            <span>Nombre</span>
+            <input type="text" name="nombre" required placeholder="Tu nombre" />
+          </label>
+          <label>
+            <span>Correo</span>
+            <input type="email" name="correo" required placeholder="tu@correo.com" />
+          </label>
+          <label>
+            <span>Teléfono</span>
+            <input type="tel" name="telefono" placeholder="+51 999 999 999" />
+          </label>
+          <label>
+            <span>Mensaje</span>
+            <textarea name="mensaje" rows="4" required placeholder="¿Qué necesitas lograr?"></textarea>
+          </label>
+          <button type="submit" class="btn full primary ripple">Enviar</button>
+          <small class="form-hint">Al enviar aceptas nuestra política de privacidad.</small>
+          <div class="toast" id="toast" role="status" aria-live="polite">¡Enviado! Pronto te contactaremos.</div>
+        </form>
+      </aside>
+    </div>
+  </header>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="services">
+    <div class="wrap">
+      <h2 class="section-title reveal fade-up">Servicios que mueven la aguja</h2>
+      <p class="section-sub reveal fade-up delay-1">
+        Diseñados para crecer: performance, posicionamiento y construcción de marca.
+      </p>
+
+      <div class="cards">
+        <article class="card tilt reveal fade-up delay-1">
+          <div class="card-icon">📈</div>
+          <h3>Performance Ads</h3>
+          <p>Campañas en Google, Meta y TikTok enfocados en CPA y ROAS. Iteramos con A/B testing continuo.</p>
+          <ul class="mini">
+            <li>Segmentación avanzada</li>
+            <li>Creatividades iterativas</li>
+            <li>Dashboard en tiempo real</li>
+          </ul>
+        </article>
+
+        <article class="card tilt reveal fade-up delay-2">
+          <div class="card-icon">🔍</div>
+          <h3>SEO & Contenido</h3>
+          <p>Arquitectura, contenido y autoridad. Subimos posiciones y mantenemos el tráfico cualificado.</p>
+          <ul class="mini">
+            <li>Investigación de keywords</li>
+            <li>Optimización on/off page</li>
+            <li>Calendario editorial</li>
+          </ul>
+        </article>
+
+        <article class="card tilt reveal fade-up delay-3">
+          <div class="card-icon">🎨</div>
+          <h3>Branding & Web</h3>
+          <p>Identidad visual sólida y sitios de alto rendimiento enfocados en conversión y UX.</p>
+          <ul class="mini">
+            <li>Guía de marca</li>
+            <li>UI/UX orientado a conversiones</li>
+            <li>Landing pages high-converting</li>
+          </ul>
+        </article>
+
+        <article class="card tilt reveal fade-up delay-4">
+          <div class="card-icon">🤖</div>
+          <h3>Automatización</h3>
+          <p>Flujos con email/SMS/CRM, scoring y nurturing para activar y retener clientes.</p>
+          <ul class="mini">
+            <li>Integraciones CRM</li>
+            <li>Secuencias de nurturing</li>
+            <li>Medición end-to-end</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOWCASE / IMAGINACIÓN -->
+  <section class="showcase">
+    <div class="wrap">
+      <div class="show-grid">
+        <div class="show-text reveal fade-right">
+          <h2>Ideas que se ven y se sienten</h2>
+          <p>
+            Creamos experiencias con movimiento: microinteracciones, transiciones suaves, 
+            tipografía precisa y color con intención. Todo optimizado para velocidad y SEO.
+          </p>
+          <p>
+            Nuestro enfoque combina estrategia + creatividad + data para que cada pieza cumpla 
+            un objetivo: convertir, fidelizar o educar.
+          </p>
+          <div class="metrics">
+            <div class="metric">
+              <span class="num" data-target="120">0</span><span class="unit">%</span>
+              <small>mejora en CTR</small>
+            </div>
+            <div class="metric">
+              <span class="num" data-target="65">0</span><span class="unit">%</span>
+              <small>reducción de CPA</small>
+            </div>
+            <div class="metric">
+              <span class="num" data-target="3">0</span><span class="unit">x</span>
+              <small>ROAS promedio</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="mosaic reveal fade-left">
+          <figure class="tile t1"></figure>
+          <figure class="tile t2"></figure>
+          <figure class="tile t3"></figure>
+          <figure class="tile t4"></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA MEDIA -->
+  <section class="cta-mid">
+    <div class="wrap reveal fade-up">
+      <h2>¿Listo para despegar?</h2>
+      <p>Te ayudamos a priorizar acciones que impacten hoy y construyan valor mañana.</p>
+      <a href="#contacto" class="btn primary ripple">Habla con BrodaDigital</a>
+    </div>
+  </section>
+
+  <!-- FOOTER con carrusel HOLA! -->
+  <footer class="footer">
+    <div class="marquee" aria-hidden="true">
+      <div class="track">
+        <span>HOLA! HOLA! HOLA! &nbsp;</span>
+        <span>HOLA! HOLA! HOLA! &nbsp;</span>
+        <span>HOLA! HOLA! HOLA! &nbsp;</span>
+        <span>HOLA! HOLA! HOLA! &nbsp;</span>
+      </div>
+    </div>
+
+    <div class="wrap foot-grid">
+      <div class="foot-col">
+        <h3>BrodaDigital</h3>
+        <p>Agencia de marketing digital enfocada en crecimiento medible.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Contacto</h4>
+        <ul class="foot-list">
+          <li>📧 hola@brodadigital.com</li>
+          <li>📱 +51 999 999 999</li>
+          <li>📍 Lima, Perú</li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Información</h4>
+        <ul class="foot-list">
+          <li>Política de privacidad</li>
+          <li>Términos y condiciones</li>
+          <li>Soporte</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="copy">
+      © <span id="year"></span> BrodaDigital — Todos los derechos reservados
+    </div>
+  </footer>
+
+  <script src="../landing/home.js"></script>
+</body>
+</html>
