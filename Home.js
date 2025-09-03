@@ -123,3 +123,37 @@ form.addEventListener('submit', (e)=>{
   setTimeout(()=>{ toast.style.display='none'; }, 2800);
   form.reset();
 });
+
+
+document.getElementById("leadForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = {
+      nombre: form.nombre.value,
+      empresa: form.Empresa.value,
+      correo: form.correo.value,
+      telefono: form.telefono.value,
+      mensaje: form.mensaje.value
+    };
+
+    try {
+      const response = await fetch("https://hook.us2.make.com/g2j7g7wypp9idakzrh4tvm229c0w8kma", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        document.getElementById("toast").style.display = "block";
+        form.reset();
+      } else {
+        alert("Error al enviar el formulario. Intenta de nuevo.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Error de conexión.");
+    }
+  });
