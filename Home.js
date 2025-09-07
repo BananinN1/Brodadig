@@ -157,3 +157,36 @@ document.getElementById("leadForm").addEventListener("submit", async function (e
       alert("Error de conexión.");
     }
   });
+  // ===== PARALLAX FORM =====
+const formCard = $(".hero-form-card");
+
+// Parallax con mouse
+formCard.addEventListener("mousemove", (e) => {
+  const rect = formCard.getBoundingClientRect();
+  const x = (e.clientX - rect.left) / rect.width - 0.5;
+  const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+  formCard.style.transform = `
+    rotateY(${x * 18}deg) 
+    rotateX(${-y * 18}deg) 
+    translateY(-4px) 
+    scale(1.02)
+  `;
+  formCard.classList.add("parallax-active");
+});
+
+// Reset al salir
+formCard.addEventListener("mouseleave", () => {
+  formCard.style.transform = "none";
+  formCard.classList.remove("parallax-active");
+});
+
+// Parallax con scroll (suave)
+const scrollParallax = () => {
+  const rect = formCard.getBoundingClientRect();
+  const offset = rect.top / window.innerHeight; 
+  const move = offset * 40; // intensidad
+
+  formCard.style.transform = `translateY(${move}px)`;
+};
+window.addEventListener("scroll", scrollParallax);
